@@ -39,7 +39,7 @@ public class GeminiService {
                 .bodyValue(requestBody)
                 .retrieve()
                 .bodyToMono(String.class)
-                .retryWhen(Retry.backoff(3, Duration.ofSeconds(2))
+                .retryWhen(Retry.backoff(3, Duration.ofSeconds(5))
                         .filter(this::isRetryable)
                         .onRetryExhaustedThrow((spec, signal) -> signal.failure()))
                 .block();

@@ -5,11 +5,10 @@ import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name= "users")
+@Table(name = "users")
 @Data
 public class User {
     @Id
@@ -19,10 +18,12 @@ public class User {
     @Column(unique = true, nullable = false)
     private String email;
 
+    private String keycloakId;
+
     @Column(nullable = false)
     private String password;
-    private String firstname;
-    private String lastname;
+    private String firstName;
+    private String lastName;
 
     @Enumerated(EnumType.STRING)
     private UserRole role = UserRole.USER;
@@ -32,5 +33,4 @@ public class User {
 
     @UpdateTimestamp
     private LocalDateTime updatedAt;
-
 }

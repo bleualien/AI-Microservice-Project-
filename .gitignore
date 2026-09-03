@@ -1,0 +1,41 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Maven
+target/
+*.class
+
+# Logs
+*.log
+logs/
+
+# Spring Boot
+*.jar
+*.war
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Test output
+surefire-reports/
+
+# Local configuration
+application-local.yml
+application-local.yaml
+application-local.properties
